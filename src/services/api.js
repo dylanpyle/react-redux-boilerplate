@@ -1,5 +1,7 @@
 import fetch from 'isomorphic-fetch';
 
+// Here's a mirror of the `/all` response, in case this API ever disappears:
+// https://gist.github.com/dylanpyle/2795245b57df7a8baa643c08f0680b4c
 const API_BASE = 'https://restcountries.eu/rest/v1';
 
 const baseHeaders = Object.freeze({
