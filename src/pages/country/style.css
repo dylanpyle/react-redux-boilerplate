@@ -1,0 +1,5 @@
+@import '../../css/typography';
+
+.title {
+  @mixin typography--page-title;
+}

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Run a single test
+# Usage: `bin/tt services/points/spec.js`
+
+NODE_ENV=test $(npm bin)/tape test-helpers/setup.js $1 | $(npm bin)/tap-spec

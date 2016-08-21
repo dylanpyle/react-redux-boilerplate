@@ -1,0 +1,11 @@
+@define-mixin typography--app-title {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: normal;
+}
+
+@define-mixin typography--page-title {
+  font-size: 20px;
+  font-weight: bold;
+}

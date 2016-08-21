@@ -1,0 +1,11 @@
+@import './reset';
+
+body {
+  font-smoothing: none;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,17 @@
+@import '../../css/typography';
+
+.header {
+  padding: 30px;
+  text-align: center;
+}
+
+.title {
+  @mixin typography--app-title;
+}
+
+.contentContainer {
+  border: 5px solid #333;
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 20px;
+}
