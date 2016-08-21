@@ -1,5 +1,7 @@
 # react-redux-boilerplate
 
+[![CircleCI](https://circleci.com/gh/dylanpyle/react-redux-boilerplate.svg?style=svg)](https://circleci.com/gh/dylanpyle/react-redux-boilerplate)
+
 A personal starting point for new projects in React/Redux. Clone and go.
 
 Principles:
