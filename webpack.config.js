@@ -33,7 +33,7 @@ const baseConfig = {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract(
           'style',
-          'css?modules&importLoaders=1!postcss'
+          'css?modules&localIdentName=[local]--[hash:base64:8]&importLoaders=1!postcss'
         )
       },
       {
