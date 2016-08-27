@@ -1,3 +1,8 @@
 machine:
   node:
     version: 6.*
+test:
+  override:
+    - make lint
+    - make build
+    - make test

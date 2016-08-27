@@ -68,7 +68,6 @@
     }
   },
   "scripts": {
-    "start": "make serve",
-    "test": "make lint && make test"
+    "start": "make serve"
   }
 }
