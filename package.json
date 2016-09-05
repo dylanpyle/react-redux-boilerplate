@@ -37,7 +37,7 @@
     "react-dom": "15.3.1",
     "react-redux": "4.4.5",
     "react-router": "2.7.0",
-    "redux": "3.5.2",
+    "redux": "3.6.0",
     "redux-thunk": "2.1.0",
     "style-loader": "0.13.1",
     "tap-spec": "4.1.1",
