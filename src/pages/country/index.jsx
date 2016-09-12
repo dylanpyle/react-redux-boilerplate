@@ -42,7 +42,12 @@ export class CountryListPage extends Component {
 }
 
 CountryListPage.propTypes = {
-  country: PropTypes.object,
+  country: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    altSpellings: PropTypes.string.isRequired,
+    capital: PropTypes.string.isRequired,
+    population: PropTypes.string.isRequired
+  }),
   isFetching: PropTypes.bool.isRequired,
   getCountryList: PropTypes.func.isRequired
 };
