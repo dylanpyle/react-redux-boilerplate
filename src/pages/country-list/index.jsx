@@ -8,23 +8,21 @@ import selectCountry from '../../services/select-country';
 import getCountryList from '../../redux/countries/actions/get-list';
 import style from './style.css';
 
-export class CountryListPage extends Component {
+function renderCountry(country) {
+  const code = country.alpha2Code;
+
+  return (
+    <li key={code}>
+      <Link to={`/countries/${code}`}>
+        {country.name}
+      </Link>
+    </li>
+  );
+}
+
+class CountryListPage extends Component {
   componentWillMount() {
     this.props.getCountryList();
-
-    this.renderCountry = this.renderCountry.bind(this);
-  }
-
-  renderCountry(country) {
-    const code = country.alpha2Code;
-
-    return (
-      <li key={code}>
-        <Link to={`/countries/${code}`}>
-          {country.name}
-        </Link>
-      </li>
-    );
   }
 
   render() {
@@ -36,7 +34,7 @@ export class CountryListPage extends Component {
       <section className={style.countryListPage}>
         <h1 className={style.title}>Choose a country to learn more:</h1>
         <ul>
-          {this.props.countries.map(this.renderCountry)}
+          {this.props.countries.map(renderCountry)}
         </ul>
       </section>
     );
@@ -45,7 +43,12 @@ export class CountryListPage extends Component {
 }
 
 CountryListPage.propTypes = {
-  countries: PropTypes.array.isRequired,
+  countries: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      alpha2Code: PropTypes.string.isRequired
+    })
+  ).isRequired,
   isFetching: PropTypes.bool.isRequired,
   getCountryList: PropTypes.func.isRequired
 };
