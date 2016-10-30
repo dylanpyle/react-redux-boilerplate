@@ -7,7 +7,7 @@ import selectCountry from '../../services/select-country';
 import getCountryList from '../../redux/countries/actions/get-list';
 import style from './style.css';
 
-export class CountryListPage extends Component {
+class CountryPage extends Component {
   componentWillMount() {
     if (!this.props.country) {
       this.props.getCountryList();
@@ -41,7 +41,7 @@ export class CountryListPage extends Component {
   }
 }
 
-CountryListPage.propTypes = {
+CountryPage.propTypes = {
   country: PropTypes.shape({
     name: PropTypes.string.isRequired,
     altSpellings: PropTypes.string.isRequired,
@@ -65,4 +65,4 @@ const mapDispatchToProps = {
   getCountryList
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CountryListPage);
+export default connect(mapStateToProps, mapDispatchToProps)(CountryPage);
